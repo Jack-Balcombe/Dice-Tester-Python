@@ -12,7 +12,7 @@ I used Google Gemini to translate the original script into Python. The underlyin
 ## How to Use
 To run the script, first set up a Python virtual environment and install the `numpy` library.
 
-Windows (command prompt):
+**Windows (command prompt):**
 ```
 python3 -m venv venv
 venv\Scripts\activate.bat
@@ -20,7 +20,7 @@ pip install -r requirements.txt
 ```
 *(I have never used Python virtual environments in Windows without WSL so please let me know if the commands above don't work)*
 
-Mac / Linux (Bash / zsh):
+**Mac / Linux (Bash / zsh):**
 ```
 python3 -m venv venv
 source venv/bin/activate
