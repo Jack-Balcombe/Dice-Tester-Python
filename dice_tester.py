@@ -1,14 +1,14 @@
-import numpy as np
+#!/usr/bin/python3
 
 # Initialise variables
 num_sides = -1
 e_value = -1
 
-chi_values = np.array([[2.706, 6.635], [4.605, 9.210], [6.251, 11.341],
-[7.779, 13.277], [9.236, 15.086], [10.645, 16.812], [12.017, 18.475],
-[13.362, 20.090], [14.684, 21.666], [15.987, 23.209], [17.275, 24.725],
-[18.549, 26.217], [19.812, 27.688], [21.064, 29.141], [22.307, 30.578],
-[23.542, 32.000], [24.769, 33.409], [25.989, 34.805], [27.204, 36.191]])
+chi_values = [[2.706, 6.635], [4.605, 9.210], [6.251, 11.341], [7.779, 13.277],
+[9.236, 15.086], [10.645, 16.812], [12.017, 18.475], [13.362, 20.090],
+[14.684, 21.666], [15.987, 23.209], [17.275, 24.725], [18.549, 26.217],
+[19.812, 27.688], [21.064, 29.141], [22.307, 30.578], [23.542, 32.000],
+[24.769, 33.409], [25.989, 34.805], [27.204, 36.191]]
 
 # Get user input
 while num_sides < 2 or num_sides > 20:
@@ -36,7 +36,7 @@ while e_value < 5:
             e_value = -1
 
 num_rolls = num_sides * e_value
-tally = np.zeros(num_sides, dtype=int)
+tally = [0 for i in range(num_sides)]
 
 print(f"You will need to roll your die {num_rolls} times")
 print("Please enter each number when prompted")
@@ -59,12 +59,12 @@ for i in range(num_rolls):
 # Display results
 print()
 print("Totals")
-for i, count in enumerate(tally):
-    print(f"{i+1}: {count}")
+for i in range(num_sides):
+    print(f"{i+1}: {tally[i]}")
 
 result = sum((count - e_value) ** 2 for count in tally) / e_value
-chi_value_1 = chi_values[num_sides - 2, 0]
-chi_value_2 = chi_values[num_sides - 2, 1]
+chi_value_1 = chi_values[num_sides - 2][0]
+chi_value_2 = chi_values[num_sides - 2][1]
 
 print()
 print(f"Your Chi-Squared value is {result}")
