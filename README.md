@@ -5,9 +5,11 @@ This is a simple Python script which tests if dice are fair or biased, using the
 
 This script is forked from mindbane's [Dice-Tester](https://github.com/mindbane/Dice-Tester/). Functionally, it is almost identical to mindbane's script, but written in Python instead of Visual Basic. I wanted a Python version of the script because I use Linux, and Visual Basic scripts only work on Windows as far as I know.
 
-I used Google Gemini to translate the original script into Python. The underlying maths and most of the prompts are identical to mindbane's script, but I made a couple of changes:
+I used Google Gemini to translate the original script into Python. The underlying maths and most of the prompts are identical to mindbane's script, but I made a few changes:
 - Made the script display how many input rolls you have entered so far. I found that entering 100+ numbers into the terminal with no indication of how many more I had to go was a little frustrating, and wanted to see my progress.
+- Dice numbers start from 1 instead of 0, to make things less confusing (ie. if you have a 12 sided dice, "12" is a valid roll, and "0" is not)
 - Tidied up and Python-ified the code (Gemini translated it without any issues, but the output code was ugly and not very Pythonic)
+- Added basic handling of invalid input
 
 ## How to Use
 To run the script, first set up a Python virtual environment and install the `numpy` library.
