@@ -13,13 +13,12 @@ I translated the original script into Python, with the help of Google Gemini. Th
 - Tidied up and Python-ified the code *(Gemini translated it without any issues, but the output code had bad style and was not very Pythonic. Gemini also made use of the `numpy` library, which was unnecessary for such a simple script. AI is powerful, but still has plenty of room for improvement. By using default Python features instead of `numpy`, I made the script work without having to set up a virtual environment or install additional libraries first)*
 
 ## How to Use
-To run the Dice Tester script, enter the command
+To run the Dice Tester script, enter the following command in your terminal:
 ```
 python3 dice_tester.py
 ```
-in your terminal.
 
-If the file permissions of `dice_tester.py` allow you to execute the file as a program, you can instead use
+If the file permissions of `dice_tester.py` allow you to execute the file as a program, you can instead use:
 ```
 ./dice_tester.py
 ```
